@@ -1,0 +1,217 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+// ==================================
+// Tables CORE Better Auth
+// ==================================
+
+model User {
+  id            String   @id @default(cuid())
+  email         String   @unique
+  emailVerified Boolean  @default(false)
+  name          String?
+  image         String?
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  // Relations
+  sessions Session[]
+  accounts Account[]
+}
+
+model Session {
+  id        String   @id @default(cuid())
+  userId    String
+  token     String   @unique
+  expiresAt DateTime
+  ipAddress String?
+  userAgent String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  // Relations
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model Account {
+  id                    String    @id @default(cuid())
+  userId                String
+  accountId             String
+  providerId            String
+  accessToken           String?
+  refreshToken          String?
+  accessTokenExpiresAt  DateTime?
+  refreshTokenExpiresAt DateTime?
+  scope                 String?
+  idToken               String?
+  password              String? // 👈 Stocke le hash du mot de passe si tu utilises email/password
+  createdAt             DateTime  @default(now())
+  updatedAt             DateTime  @updatedAt
+
+  // Relations
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model Verification {
+  id         String   @id @default(cuid())
+  identifier String // 👈 Peut être l'email ou le token de session
+  value      String // 👈 Token de vérification
+  expiresAt  DateTime
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+}
+
+// ========================
+// Modèle principal : Recette
+// ========================
+model Recipe {
+  id          String         @id @default(cuid())
+  order       Int?           @default(0) // pour trier les recettes dans l'ordre souhaité
+  title       String
+  slug        String         @unique // pour les URLs SEO-friendly
+  category    CategoryRecipe // catégorie de la recette (ex: "plat principal", "dessert", etc.)
+  description String
+  author      String?        @default("Anonyme") // nom de l'auteur, optionnel
+  country     State // pays d'origine
+  createdAt   DateTime       @default(now()) // date de création (ou de publication)
+  updatedAt   DateTime       @updatedAt
+
+  // Métadonnées de la fiche
+  prepTime    Int // minutes
+  cookTime    Int
+  totalTime   Int // calculable mais stocké pour simplicité
+  servings    Int // nombre de personnes
+  difficulty  String // "facile", "moyenne", "difficile"
+  rating      Float  @default(0) // moyenne des notes
+  ratingCount Int    @default(0) // nombre de votes pour calcul de la moyenne
+
+  // Contenu textuel
+  tips String? // astuce du chef (markdown possible)
+
+  images Image[] // Images principales et secondaires
+
+  // Relations
+  ingredients RecipeIngredient[]
+  steps       Step[]
+  tags        TagOnRecipe[]
+
+  // Pour la recherche
+  searchVector String? // optionnel : pour recherche full-text (PostgreSQL)
+}
+
+enum CategoryRecipe {
+  Entree
+  PlatPrincipal
+  Dessert
+  Apéritif
+  Boisson
+  Accompagnement
+  Sauce
+  Autre
+}
+
+enum State {
+  France
+  Italie
+  Espagne
+  Japon
+  Inde
+  Chine
+  Thai
+  Asie
+  AmeriqueLatine
+  Afrique
+  Magreb
+  Autre
+}
+
+// ========================
+// Images secondaires (galerie)
+// ========================
+model Image {
+  id        String   @id @default(cuid())
+  url       String // chemin ou URL ou base 64
+  isMain    Boolean  @default(true) // image principale ou secondaire
+  caption   String? // légende optionnelle
+  recipeId  String
+  recipe    Recipe   @relation(fields: [recipeId], references: [id], onDelete: Cascade)
+  createdAt DateTime @default(now())
+}
+
+// ========================
+// Étapes de préparation
+// ========================
+model Step {
+  id          String @id @default(cuid())
+  order       Int // numéro de l'étape (1,2,3...)
+  instruction String // texte descriptif
+  recipeId    String
+  recipe      Recipe @relation(fields: [recipeId], references: [id], onDelete: Cascade)
+
+  // Illustrations : plusieurs images possibles par étape
+  images StepImage[]
+}
+
+// ========================
+// Images associées à chaque étape
+// ========================
+model StepImage {
+  id      String  @id @default(cuid())
+  url     String // chemin de l'image illustrant l'étape
+  caption String? // légende optionnelle
+  stepId  String
+  step    Step    @relation(fields: [stepId], references: [id], onDelete: Cascade)
+}
+
+// ========================
+// Ingrédients (table de référence unique)
+// ========================
+model Ingredient {
+  id       String  @id @default(cuid())
+  name     String  @unique
+  category String? // Optionnel : catégorie (légume, épice, viande...)
+
+  recipeIngredients RecipeIngredient[] // relation inverse pour retrouver les recettes utilisant cet ingrédient
+}
+
+// ========================
+// Lien Recette <-> Ingrédient avec quantité
+// ========================
+model RecipeIngredient {
+  recipeId     String
+  ingredientId String
+  quantity     Float // quantité (ex: 200, 0.5, etc.)
+  unit         String // "g", "ml", "cc", "cs", "pièce(s)", etc.
+  order        Int?   @default(0) // Optionnel : ordre d'affichage
+
+  recipe     Recipe     @relation(fields: [recipeId], references: [id], onDelete: Cascade)
+  ingredient Ingredient @relation(fields: [ingredientId], references: [id], onDelete: Cascade)
+
+  @@id([recipeId, ingredientId])
+  @@index([recipeId])
+}
+
+// ========================
+// Tags (ex: "plat principal", "marocain", "cocotte")
+// ========================
+model Tag {
+  id      String        @id @default(cuid())
+  name    String        @unique
+  slug    String        @unique
+  recipes TagOnRecipe[]
+}
+
+model TagOnRecipe {
+  recipeId String
+  tagId    String
+  recipe   Recipe @relation(fields: [recipeId], references: [id], onDelete: Cascade)
+  tag      Tag    @relation(fields: [tagId], references: [id], onDelete: Cascade)
+
+  @@id([recipeId, tagId])
+}
