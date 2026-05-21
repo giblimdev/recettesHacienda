@@ -1,0 +1,204 @@
+Crêpes.
+
+Quiche lorraine.
+
+Bœuf bourguignon.
+
+Coq au vin.
+
+Blanquette de veau.
+
+Ratatouille.
+
+Soupe à l’oignon.
+
+Croque-monsieur.
+
+Gratin dauphinois.
+
+Tarte Tatin.
+
+Pot-au-feu.
+
+Salade niçoise.
+
+Cassoulet.
+
+Confit de canard.
+
+Moules marinières.
+
+Soufflé au fromage.
+
+Madeleines.
+
+Éclair au chocolat.
+
+Tarte aux pommes.
+
+Crème brûlée.
+
+Cuisine sud-américaine
+Ceviche péruvien.
+
+Feijoada brésilienne.
+
+Empanadas argentines.
+
+Aji de gallina.
+
+Pão de queijo.
+
+Arepas.
+
+Asado argentin.
+
+Locro.
+
+Brigadeiro.
+
+Moqueca.
+
+Causa limeña.
+
+Tamales colombiens.
+
+Churrasco brésilien.
+
+Humitas.
+
+Sopa paraguaya.
+
+Arroz con pollo.
+
+Dulce de leche flan.
+
+Lomo saltado.
+
+Pabellón criollo.
+
+Alfajores.
+
+Cuisine asiatique
+Sushi.
+
+Ramen.
+
+Tempura.
+
+Gyoza.
+
+Yakisoba.
+
+Curry thaï vert.
+
+Pad thaï.
+
+Tom yum.
+
+Pho.
+
+Bánh mì.
+
+Nasi goreng.
+
+Rendang.
+
+Satay.
+
+Bibimbap.
+
+Kimchi jjigae.
+
+Bulgogi.
+
+Dim sum.
+
+Mapo tofu.
+
+Canard laqué.
+
+Biryani.
+
+Cuisine italienne
+Pizza margherita.
+
+Spaghetti carbonara.
+
+Lasagnes.
+
+Risotto aux champignons.
+
+Osso buco.
+
+Gnocchi à la tomate.
+
+Raviolis ricotta-épinards.
+
+Tiramisu.
+
+Panna cotta.
+
+Saltimbocca.
+
+Focaccia.
+
+Minestrone.
+
+Arancini.
+
+Polenta.
+
+Caprese.
+
+Calzone.
+
+Cacio e pepe.
+
+Vitello tonnato.
+
+Parmigiana d’aubergines.
+
+Gelato.
+
+Cuisine espagnole
+Paella valenciana.
+
+Tortilla española.
+
+Gazpacho.
+
+Salmorejo.
+
+Patatas bravas.
+
+Croquetas.
+
+Churros.
+
+Fabada asturiana.
+
+Pulpo a la gallega.
+
+Gambas al ajillo.
+
+Migas.
+
+Pisto manchego.
+
+Arroz negro.
+
+Empanadas galiciennes.
+
+Bacalao al pil-pil.
+
+Cocido madrileño.
+
+Huevos rotos.
+
+Tarta de Santiago.
+
+Flan napolitain.
+
+Churros con chocolat.
+
