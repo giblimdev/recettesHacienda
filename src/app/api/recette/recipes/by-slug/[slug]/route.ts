@@ -1,13 +1,15 @@
-// @/api/recipes/by-slug/[slug]/route.ts
-import { NextResponse } from "next/server";
-import { prisma } from "@/src//lib/prisma";
+// src/app/api/recette/recipes/by-slug/[slug]/route.ts
+import { NextRequest, NextResponse } from "next/server";
+import { prisma } from "@/src/lib/prisma"; // correction du double slash
 
 export async function GET(
-  request: Request,
-  { params }: { params: { slug: string } },
+  request: NextRequest,
+  { params }: { params: Promise<{ slug: string }> },
 ) {
+  const { slug } = await params;
+
   const recipe = await prisma.recipe.findUnique({
-    where: { slug: params.slug },
+    where: { slug },
     include: {
       images: true,
       ingredients: { include: { ingredient: true }, orderBy: { order: "asc" } },
@@ -15,7 +17,10 @@ export async function GET(
       tags: { include: { tag: true } },
     },
   });
-  if (!recipe)
+
+  if (!recipe) {
     return NextResponse.json({ error: "Not found" }, { status: 404 });
+  }
+
   return NextResponse.json(recipe);
 }
