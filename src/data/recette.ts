@@ -1400,7 +1400,7 @@ export const recettes: Recette[] = [
     description:
       "Jeunes fèves de soja japonaises servies chaudes avec fleur de sel.",
     country: "Japon",
-    image: "/images/edamame.jpg",
+    image: "/images/edamame.webp",
   },
   {
     id: 149,
