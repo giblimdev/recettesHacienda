@@ -33,8 +33,7 @@ export default function AdminRecipeSlugPage() {
   const mode = searchParams?.get("mode");
 
   const isEditMode = mode === "edit";
-  const isViewMode = !isEditMode || mode === "view";
-
+  const isViewMode = !isEditMode;
   const [recette, setRecette] = useState<Recette | null>(null);
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
