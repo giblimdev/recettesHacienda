@@ -1004,6 +1004,25 @@ export const recettes: Recette[] = [
     country: "Asie",
     image: "/images/biryani.jpg",
   },
+  {
+    id: 109,
+    title: "maki",
+    slug: "maki",
+    category: "",
+    description: "Riz vinaigré accompagné de poisson cru et algue nori.",
+    country: "Japon",
+    image: "/images/maki.jpg",
+  },
+  {
+    id: 110,
+    title: "Poule au pot",
+    slug: "poule-au-pot",
+    category: "PlatPrincipal",
+    description:
+      "Poulet entier cuit dans un bouillon avec légumes et aromates.",
+    country: "Asie",
+    image: "/images/poule-au-pot.jpg",
+  },
 ];
 
 // Helpers
