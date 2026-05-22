@@ -1,25 +1,23 @@
-// @/src/admin/page.tsx
-
-// @/src/admin/page.tsx
-
+// @/src/app/admin/page.tsx
 "use client";
 
 import React, { useState } from "react";
+import { useRouter } from "next/navigation";
 import CardReciep from "@/src/components/recipes/CardReciep";
 import { recettes, type Recette } from "@/src/data/recette";
 
 const AdminPage = () => {
+  const router = useRouter();
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedCountry, setSelectedCountry] = useState<string>("all");
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
   const [showStats, setShowStats] = useState(true);
+  const [recipes, setRecipes] = useState<Recette[]>(recettes);
 
-  // Extraire les pays et catégories uniques
-  const countries = ["all", ...new Set(recettes.map((r) => r.country))];
-  const categories = ["all", ...new Set(recettes.map((r) => r.category))];
+  const countries = ["all", ...new Set(recipes.map((r) => r.country))];
+  const categories = ["all", ...new Set(recipes.map((r) => r.category))];
 
-  // Filtrer les recettes
-  const filteredRecettes = recettes.filter((recette) => {
+  const filteredRecettes = recipes.filter((recette) => {
     const matchesSearch =
       recette.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
       recette.description.toLowerCase().includes(searchTerm.toLowerCase());
@@ -30,28 +28,30 @@ const AdminPage = () => {
     return matchesSearch && matchesCountry && matchesCategory;
   });
 
-  // Gestionnaires d'événements
+  // Gestionnaires - TOUS utilisent le slug maintenant
   const handleView = (recette: Recette) => {
     console.log("Voir recette:", recette);
-    alert(`Voir la recette: ${recette.title}`);
-    // TODO: Naviguer vers /recettes/${recette.slug}
+    router.push(`/admin/${recette.slug}?mode=view`);
   };
 
   const handleEdit = (recette: Recette) => {
     console.log("Modifier recette:", recette);
-    alert(`Modifier la recette: ${recette.title}`);
-    // TODO: Ouvrir formulaire d'édition
+    // Utiliser le slug avec mode=edit au lieu de l'ID
+    router.push(`/admin/${recette.slug}?mode=edit`);
   };
 
-  const handleDelete = (recette: Recette) => {
-    console.log("Supprimer recette:", recette);
+  const handleDelete = async (recette: Recette) => {
     if (confirm(`Êtes-vous sûr de vouloir supprimer "${recette.title}" ?`)) {
-      alert(`Recette supprimée: ${recette.title}`);
-      // TODO: Appeler API de suppression
+      const newRecipes = recipes.filter((r) => r.id !== recette.id);
+      setRecipes(newRecipes);
+      alert(`Recette "${recette.title}" supprimée avec succès !`);
     }
   };
 
-  // Calculer les statistiques
+  const handleAdd = () => {
+    router.push("/admin/new");
+  };
+
   const getStats = () => {
     const statsByCategory: { [key: string]: number } = {};
     const statsByCountry: { [key: string]: number } = {};
@@ -65,6 +65,18 @@ const AdminPage = () => {
   };
 
   const { statsByCategory, statsByCountry } = getStats();
+
+  const getCategoryLabel = (category: string): string => {
+    const labels: { [key: string]: string } = {
+      PlatPrincipal: "🍽️ Plat Principal",
+      Entree: "🥗 Entrée",
+      Dessert: "🍰 Dessert",
+      Accompagnement: "🥔 Accompagnement",
+      Conserve: "🥫 Conserve",
+      Sauce: "🧂 Sauce",
+    };
+    return labels[category] || category;
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
@@ -80,12 +92,20 @@ const AdminPage = () => {
                 Gérez votre collection culinaire
               </p>
             </div>
-            <button
-              onClick={() => alert("Nouvelle recette")}
-              className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg font-medium transition-colors flex items-center gap-2"
-            >
-              <span>➕</span> Ajouter
-            </button>
+            <div className="flex gap-3">
+              <button
+                onClick={() => router.push("/")}
+                className="bg-gray-500 hover:bg-gray-600 text-white px-4 py-2 rounded-lg font-medium transition-colors flex items-center gap-2"
+              >
+                <span>🏠</span> Accueil
+              </button>
+              <button
+                onClick={handleAdd}
+                className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg font-medium transition-colors flex items-center gap-2"
+              >
+                <span>➕</span> Ajouter
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -123,13 +143,8 @@ const AdminPage = () => {
                 <div className="text-sm opacity-90">Pays</div>
               </div>
               <div>
-                <div className="text-2xl font-bold">
-                  {Math.round(
-                    filteredRecettes.reduce((acc, r) => acc + r.id, 0) /
-                      filteredRecettes.length,
-                  ) || 0}
-                </div>
-                <div className="text-sm opacity-90">ID moyen</div>
+                <div className="text-2xl font-bold">{recipes.length}</div>
+                <div className="text-sm opacity-90">Total base</div>
               </div>
             </div>
           </div>
@@ -152,7 +167,6 @@ const AdminPage = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            {/* Recherche */}
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">
                 Rechercher
@@ -166,7 +180,6 @@ const AdminPage = () => {
               />
             </div>
 
-            {/* Filtre par pays */}
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">
                 Pays
@@ -184,7 +197,6 @@ const AdminPage = () => {
               </select>
             </div>
 
-            {/* Filtre par catégorie */}
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">
                 Catégorie
@@ -198,22 +210,13 @@ const AdminPage = () => {
                   <option key={category} value={category}>
                     {category === "all"
                       ? "📋 Toutes les catégories"
-                      : category === "PlatPrincipal"
-                        ? "🍽️ Plat Principal"
-                        : category === "Entree"
-                          ? "🥗 Entrée"
-                          : category === "Dessert"
-                            ? "🍰 Dessert"
-                            : category === "Accompagnement"
-                              ? "🥔 Accompagnement"
-                              : category}
+                      : getCategoryLabel(category)}
                   </option>
                 ))}
               </select>
             </div>
           </div>
 
-          {/* Filtres actifs */}
           {(searchTerm ||
             selectedCountry !== "all" ||
             selectedCategory !== "all") && (
@@ -231,7 +234,7 @@ const AdminPage = () => {
               )}
               {selectedCategory !== "all" && (
                 <span className="bg-purple-100 text-purple-700 px-2 py-1 rounded-full text-xs">
-                  Catégorie: {selectedCategory}
+                  Catégorie: {getCategoryLabel(selectedCategory)}
                 </span>
               )}
             </div>
@@ -244,9 +247,9 @@ const AdminPage = () => {
             📖 Résultats ({filteredRecettes.length})
           </h2>
           <div className="text-sm text-gray-500">
-            {filteredRecettes.length === recettes.length
-              ? `${recettes.length} recettes au total`
-              : `Sur ${recettes.length} recettes`}
+            {filteredRecettes.length === recipes.length
+              ? `${recipes.length} recettes au total`
+              : `Sur ${recipes.length} recettes`}
           </div>
         </div>
 

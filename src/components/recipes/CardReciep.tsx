@@ -3,16 +3,7 @@
 "use client";
 
 import React, { useState } from "react";
-
-export interface Recette {
-  id: number;
-  title: string;
-  slug: string;
-  category: string;
-  description: string;
-  country: string;
-  image: string;
-}
+import { type Recette } from "@/src/data/recette";
 
 interface CardReciepProps {
   recette: Recette;
