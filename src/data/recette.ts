@@ -476,7 +476,7 @@ export const recettes: Recette[] = [
     category: "PlatPrincipal",
     description: "Pâtes avec guanciale, œuf, pecorino et poivre noir.",
     country: "Italie",
-    image: "/images/spaghetti-carbonara.jpg",
+    image: "/images/spaghetti-carbonara.webp",
   },
   {
     id: 51,
