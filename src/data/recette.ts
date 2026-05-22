@@ -867,7 +867,7 @@ export const recettes: Recette[] = [
     description:
       "Soupe vietnamienne au bouillon de bœuf, nouilles de riz et herbes fraîches.",
     country: "Asie",
-    image: "/images/pho.jpg",
+    image: "/images/pho.webp",
   },
   {
     id: 94,
