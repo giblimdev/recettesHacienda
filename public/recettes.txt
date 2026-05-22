@@ -1,204 +1,1484 @@
-Crêpes.
-
-Quiche lorraine.
-
-Bœuf bourguignon.
-
-Coq au vin.
-
-Blanquette de veau.
-
-Ratatouille.
-
-Soupe à l’oignon.
-
-Croque-monsieur.
-
-Gratin dauphinois.
-
-Tarte Tatin.
-
-Pot-au-feu.
-
-Salade niçoise.
-
-Cassoulet.
-
-Confit de canard.
-
-Moules marinières.
-
-Soufflé au fromage.
-
-Madeleines.
-
-Éclair au chocolat.
-
-Tarte aux pommes.
-
-Crème brûlée.
-
-Cuisine sud-américaine
-Ceviche péruvien.
-
-Feijoada brésilienne.
-
-Empanadas argentines.
-
-Aji de gallina.
-
-Pão de queijo.
-
-Arepas.
-
-Asado argentin.
-
-Locro.
-
-Brigadeiro.
-
-Moqueca.
-
-Causa limeña.
-
-Tamales colombiens.
-
-Churrasco brésilien.
-
-Humitas.
-
-Sopa paraguaya.
-
-Arroz con pollo.
-
-Dulce de leche flan.
-
-Lomo saltado.
-
-Pabellón criollo.
-
-Alfajores.
-
-Cuisine asiatique
-Sushi.
-
-Ramen.
-
-Tempura.
-
-Gyoza.
-
-Yakisoba.
-
-Curry thaï vert.
-
-Pad thaï.
-
-Tom yum.
-
-Pho.
-
-Bánh mì.
-
-Nasi goreng.
-
-Rendang.
-
-Satay.
-
-Bibimbap.
-
-Kimchi jjigae.
-
-Bulgogi.
-
-Dim sum.
-
-Mapo tofu.
-
-Canard laqué.
-
-Biryani.
-
-Cuisine italienne
-Pizza margherita.
-
-Spaghetti carbonara.
-
-Lasagnes.
-
-Risotto aux champignons.
-
-Osso buco.
-
-Gnocchi à la tomate.
-
-Raviolis ricotta-épinards.
-
-Tiramisu.
-
-Panna cotta.
-
-Saltimbocca.
-
-Focaccia.
-
-Minestrone.
-
-Arancini.
-
-Polenta.
-
-Caprese.
-
-Calzone.
-
-Cacio e pepe.
-
-Vitello tonnato.
-
-Parmigiana d’aubergines.
-
-Gelato.
-
-Cuisine espagnole
-Paella valenciana.
-
-Tortilla española.
-
-Gazpacho.
-
-Salmorejo.
-
-Patatas bravas.
-
-Croquetas.
-
-Churros.
-
-Fabada asturiana.
-
-Pulpo a la gallega.
-
-Gambas al ajillo.
-
-Migas.
-
-Pisto manchego.
-
-Arroz negro.
-
-Empanadas galiciennes.
-
-Bacalao al pil-pil.
-
-Cocido madrileño.
-
-Huevos rotos.
-
-Tarta de Santiago.
-
-Flan napolitain.
-
-Churros con chocolat.
+ [
+  {
+    id: 1,
+    title: "Crêpes",
+    slug: "crepes",
+    category: "Dessert",
+    description:
+      "Fines crêpes françaises dorées, polyvalentes pour le sucré ou le salé.",
+    country: "France",
+    image: "/images/crepes.webp",
+  },
+  {
+    id: 2,
+    title: "Gaufres",
+    slug: "gaufres",
+    category: "Dessert",
+    description:
+      "Gaufres moelleuses et croustillantes, un classique belge-français.",
+    country: "France",
+    image: "/images/gaufres.webp",
+  },
+  {
+    id: 3,
+    title: "Quiche Lorraine",
+    slug: "quiche-lorraine",
+    category: "PlatPrincipal",
+    description:
+      "Tarte salée emblématique avec lardons, œufs et crème fraîche.",
+    country: "France",
+    image: "/images/quiche-lorraine.jpg",
+  },
+  {
+    id: 4,
+    title: "Bœuf Bourguignon",
+    slug: "boeuf-bourguignon",
+    category: "PlatPrincipal",
+    description:
+      "Plat mijoté de bœuf au vin rouge avec carottes, oignons et champignons.",
+    country: "France",
+    image: "/images/boeuf-bourguignon.jpg",
+  },
+  {
+    id: 5,
+    title: "Coq au Vin",
+    slug: "coq-au-vin",
+    category: "PlatPrincipal",
+    description: "Coq mijoté dans du vin rouge avec lardons et champignons.",
+    country: "France",
+    image: "/images/coq-au-vin.jpg",
+  },
+  {
+    id: 6,
+    title: "Blanquette de Veau",
+    slug: "blanquette-de-veau",
+    category: "PlatPrincipal",
+    description: "Ragoût de veau à la crème et aux champignons.",
+    country: "France",
+    image: "/images/blanquette-de-veau.jpg",
+  },
+  {
+    id: 7,
+    title: "Ratatouille",
+    slug: "ratatouille",
+    category: "PlatPrincipal",
+    description: "Mélange de légumes provençaux cuits lentement.",
+    country: "France",
+    image: "/images/ratatouille.jpg",
+  },
+  {
+    id: 8,
+    title: "Soupe à l'Oignon",
+    slug: "soupe-a-loignon",
+    category: "Entree",
+    description: "Soupe gratinée traditionnelle avec pain et fromage.",
+    country: "France",
+    image: "/images/soupe-a-loignon.jpg",
+  },
+  {
+    id: 9,
+    title: "Croque-Monsieur",
+    slug: "croque-monsieur",
+    category: "PlatPrincipal",
+    description: "Sandwich chaud au jambon et fromage béchamel.",
+    country: "France",
+    image: "/images/croque-monsieur.png",
+  },
+  {
+    id: 10,
+    title: "Gratin Dauphinois",
+    slug: "gratin-dauphinois",
+    category: "Accompagnement",
+    description: "Pommes de terre tranchées cuites à la crème et à l'ail.",
+    country: "France",
+    image: "/images/gratin-dauphinois.jpg",
+  },
+  {
+    id: 11,
+    title: "Tarte Tatin",
+    slug: "tarte-tatin",
+    category: "Dessert",
+    description: "Tarte renversée aux pommes caramélisées.",
+    country: "France",
+    image: "/images/tarte-tatin.jpg",
+  },
+  {
+    id: 12,
+    title: "Crème Brûlée",
+    slug: "creme-brulee",
+    category: "Dessert",
+    description: "Crème vanillée avec croûte de sucre caramélisé.",
+    country: "France",
+    image: "/images/creme-brulee.jpg",
+  },
+  {
+    id: 13,
+    title: "Pot-au-Feu",
+    slug: "pot-au-feu",
+    category: "PlatPrincipal",
+    description: "Bouillon de viande et légumes mijoté longuement.",
+    country: "France",
+    image: "/images/pot-au-feu.jpg",
+  },
+  {
+    id: 14,
+    title: "Salade Niçoise",
+    slug: "salade-nicoise",
+    category: "Entree",
+    description: "Salade composée avec thon, œufs, olives et légumes frais.",
+    country: "France",
+    image: "/images/salade-nicoise.jpg",
+  },
+  {
+    id: 15,
+    title: "Cassoulet",
+    slug: "cassoulet",
+    category: "PlatPrincipal",
+    description: "Ragoût de haricots blancs, saucisses et confit de canard.",
+    country: "France",
+    image: "/images/cassoulet.jpg",
+  },
+  {
+    id: 16,
+    title: "Confit de Canard",
+    slug: "confit-de-canard",
+    category: "PlatPrincipal",
+    description: "Cuisses de canard cuites lentement dans leur graisse.",
+    country: "France",
+    image: "/images/confit-de-canard.jpg",
+  },
+  {
+    id: 17,
+    title: "Moules Marinières",
+    slug: "moules-mariniere",
+    category: "PlatPrincipal",
+    description: "Moules cuites au vin blanc, échalotes et persil.",
+    country: "France",
+    image: "/images/moules-mariniere.jpg",
+  },
+  {
+    id: 18,
+    title: "Madeleines",
+    slug: "madeleines",
+    category: "Dessert",
+    description: "Petits gâteaux moelleux en forme de coquille.",
+    country: "France",
+    image: "/images/madeleines.jpg",
+  },
+  {
+    id: 19,
+    title: "Éclair au Chocolat",
+    slug: "eclair-au-chocolat",
+    category: "Dessert",
+    description: "Pâte à choux garnie de crème pâtissière au chocolat.",
+    country: "France",
+    image: "/images/eclair-au-chocolat.jpg",
+  },
+  {
+    id: 20,
+    title: "Tarte aux Pommes",
+    slug: "tarte-aux-pommes",
+    category: "Dessert",
+    description: "Tarte classique garnie de fines lamelles de pommes.",
+    country: "France",
+    image: "/images/tarte-aux-pommes.jpg",
+  },
+  {
+    id: 21,
+    title: "Croque-Madame",
+    slug: "croque-madame",
+    category: "PlatPrincipal",
+    description: "Croque-monsieur surmonté d'un œuf au plat.",
+    country: "France",
+    image: "/images/croque-madame.jpg",
+  },
+  {
+    id: 22,
+    title: "Gâteau de Savoie",
+    slug: "gateau-de-savoie",
+    category: "Dessert",
+    description: "Gâteau léger et moelleux aux œufs et à la farine de maïs.",
+    country: "France",
+    image: "/images/gateau-de-savoie.jpg",
+  },
+  {
+    id: 23,
+    title: "Meringue",
+    slug: "meringue",
+    category: "Dessert",
+    description: "Blancs d'œufs sucrés et cuits lentement.",
+    country: "France",
+    image: "/images/meringue.jpg",
+  },
+  {
+    id: 24,
+    title: "Salade César",
+    slug: "salade-cesar",
+    category: "Entree",
+    description: "Salade de laitue romaine, parmesan, croûtons et œuf mollet.",
+    country: "France",
+    image: "/images/salade-cesar.jpg",
+  },
+  {
+    id: 25,
+    title: "Soufflé au Fromage",
+    slug: "souffle-au-fromage",
+    category: "PlatPrincipal",
+    description: "Soufflé léger et aérien au fromage râpé.",
+    country: "France",
+    image: "/images/souffle-au-fromage.jpg",
+  },
+  {
+    id: 26,
+    title: "Patacones",
+    slug: "patacones",
+    category: "Accompagnement",
+    description:
+      "Bananes plantains vertes aplaties et frites, accompagnement typique colombien.",
+    country: "AmeriqueLatine",
+    image: "/images/patacones.jpg",
+  },
+  {
+    id: 27,
+    title: "Riz Coco",
+    slug: "riz-coco",
+    category: "Accompagnement",
+    description:
+      "Riz à la noix de coco caramélisé, spécialité de la côte caraïbe.",
+    country: "AmeriqueLatine",
+    image: "/images/riz-coco.jpg",
+  },
+  {
+    id: 28,
+    title: "Arepa au Fromage",
+    slug: "arepa-au-fromage",
+    category: "PlatPrincipal",
+    description: "Pain de maïs farci au fromage, incontournable en Colombie.",
+    country: "AmeriqueLatine",
+    image: "/images/arepa-au-fromage.jpg",
+  },
+  {
+    id: 29,
+    title: "Ajiaco",
+    slug: "ajiaco",
+    category: "PlatPrincipal",
+    description:
+      "Soupe épaisse de Bogota à base de poulet, trois pommes de terre et guascas.",
+    country: "AmeriqueLatine",
+    image: "/images/ajiaco.jpg",
+  },
+  {
+    id: 30,
+    title: "Sancocho",
+    slug: "sancocho",
+    category: "PlatPrincipal",
+    description:
+      "Pot-au-feu colombien copieux à base de viande, manioc, banane plantain et maïs.",
+    country: "AmeriqueLatine",
+    image: "/images/sancocho.jpg",
+  },
+  {
+    id: 31,
+    title: "Ceviche Péruvien",
+    slug: "ceviche-peruvien",
+    category: "Entree",
+    description:
+      "Poisson cru mariné dans du jus de citron vert, oignons rouges, coriandre et piment.",
+    country: "AmeriqueLatine",
+    image: "/images/ceviche-peruvien.jpg",
+  },
+  {
+    id: 32,
+    title: "Feijoada Brésilienne",
+    slug: "feijoada",
+    category: "PlatPrincipal",
+    description:
+      "Ragoût de haricots noirs avec différentes viandes fumées et saucisses.",
+    country: "AmeriqueLatine",
+    image: "/images/feijoada.jpg",
+  },
+  {
+    id: 33,
+    title: "Empanadas Argentines",
+    slug: "empanadas",
+    category: "Entree",
+    description:
+      "Petits chaussons frits ou au four farcis de viande hachée, olives et œufs durs.",
+    country: "AmeriqueLatine",
+    image: "/images/empanadas.jpg",
+  },
+  {
+    id: 34,
+    title: "Asado Argentin",
+    slug: "asado",
+    category: "PlatPrincipal",
+    description:
+      "Barbecue argentin traditionnel avec différentes coupes de viande grillées au feu de bois.",
+    country: "AmeriqueLatine",
+    image: "/images/asado.jpg",
+  },
+  {
+    id: 35,
+    title: "Brigadeiro",
+    slug: "brigadeiro",
+    category: "Dessert",
+    description:
+      "Petites bouchées de chocolat au lait condensé, très populaires au Brésil.",
+    country: "AmeriqueLatine",
+    image: "/images/brigadeiro.jpg",
+  },
+  {
+    id: 36,
+    title: "Moqueca",
+    slug: "moqueca",
+    category: "PlatPrincipal",
+    description:
+      "Ragoût de poisson et fruits de mer à la noix de coco, spécialité de Bahia.",
+    country: "AmeriqueLatine",
+    image: "/images/moqueca.jpg",
+  },
+  {
+    id: 37,
+    title: "Lomo Saltado",
+    slug: "lomo-saltado",
+    category: "PlatPrincipal",
+    description: "Sauté de bœuf péruvien avec tomates, oignons et frites.",
+    country: "AmeriqueLatine",
+    image: "/images/lomo-saltado.jpg",
+  },
+  {
+    id: 38,
+    title: "Pão de Queijo",
+    slug: "pao-de-queijo",
+    category: "Accompagnement",
+    description: "Petits pains au fromage typiques du Brésil.",
+    country: "AmeriqueLatine",
+    image: "/images/pao-de-queijo.jpg",
+  },
+  {
+    id: 39,
+    title: "Locro",
+    slug: "locro",
+    category: "PlatPrincipal",
+    description: "Ragoût épais argentin à base de maïs, courge et viande.",
+    country: "AmeriqueLatine",
+    image: "/images/locro.jpg",
+  },
+  {
+    id: 40,
+    title: "Causa Limeña",
+    slug: "causa-limenia",
+    category: "Entree",
+    description: "Terre de pommes de terre jaune garnie de thon ou poulet.",
+    country: "AmeriqueLatine",
+    image: "/images/causa-limenia.jpg",
+  },
+  {
+    id: 41,
+    title: "Tamales Colombiens",
+    slug: "tamales-colombiens",
+    category: "PlatPrincipal",
+    description:
+      "Masse de maïs farcie à la viande et légumes, cuite dans des feuilles de bananier.",
+    country: "AmeriqueLatine",
+    image: "/images/tamales-colombiens.jpg",
+  },
+  {
+    id: 42,
+    title: "Churrasco Brésilien",
+    slug: "churrasco-bresilien",
+    category: "PlatPrincipal",
+    description:
+      "Viande grillée sur broche, servie avec farofa et chimichurri.",
+    country: "AmeriqueLatine",
+    image: "/images/churrasco-bresilien.jpg",
+  },
+  {
+    id: 43,
+    title: "Humitas",
+    slug: "humitas",
+    category: "Accompagnement",
+    description: "Purée de maïs frais enveloppée dans des feuilles de maïs.",
+    country: "AmeriqueLatine",
+    image: "/images/humitas.jpg",
+  },
+  {
+    id: 44,
+    title: "Sopa Paraguaya",
+    slug: "sopa-paraguaya",
+    category: "Accompagnement",
+    description: "Gâteau salé de maïs, oignon et fromage.",
+    country: "AmeriqueLatine",
+    image: "/images/sopa-paraguaya.jpg",
+  },
+  {
+    id: 45,
+    title: "Arroz con Pollo",
+    slug: "arroz-con-pollo",
+    category: "PlatPrincipal",
+    description: "Riz jaune au poulet, légumes et épices.",
+    country: "AmeriqueLatine",
+    image: "/images/arroz-con-pollo.jpg",
+  },
+  {
+    id: 46,
+    title: "Dulce de Leche Flan",
+    slug: "dulce-de-leche-flan",
+    category: "Dessert",
+    description: "Flan au caramel au lait de vache sucré.",
+    country: "AmeriqueLatine",
+    image: "/images/dulce-de-leche-flan.jpg",
+  },
+  {
+    id: 47,
+    title: "Pabellón Criollo",
+    slug: "pabellon-criollo",
+    category: "PlatPrincipal",
+    description:
+      "Riz, haricots noirs, viande effilochée et banane plantain frite.",
+    country: "AmeriqueLatine",
+    image: "/images/pabellon-criollo.jpg",
+  },
+  {
+    id: 48,
+    title: "Alfajores",
+    slug: "alfajores",
+    category: "Dessert",
+    description: "Biscuits sablés garnis de dulce de leche.",
+    country: "AmeriqueLatine",
+    image: "/images/alfajores.jpg",
+  },
+  {
+    id: 49,
+    title: "Pizza Margherita",
+    slug: "pizza-margherita",
+    category: "PlatPrincipal",
+    description: "Pizza classique à la tomate, mozzarella et basilic.",
+    country: "Italie",
+    image: "/images/pizza-margherita.jpg",
+  },
+  {
+    id: 50,
+    title: "Spaghetti Carbonara",
+    slug: "spaghetti-carbonara",
+    category: "PlatPrincipal",
+    description: "Pâtes avec guanciale, œuf, pecorino et poivre noir.",
+    country: "Italie",
+    image: "/images/spaghetti-carbonara.webp",
+  },
+  {
+    id: 51,
+    title: "Lasagnes",
+    slug: "lasagnes",
+    category: "PlatPrincipal",
+    description: "Lasagnes à la bolognaise avec béchamel et parmesan.",
+    country: "Italie",
+    image: "/images/lasagnes.jpg",
+  },
+  {
+    id: 52,
+    title: "Risotto aux Champignons",
+    slug: "risotto-aux-champignons",
+    category: "PlatPrincipal",
+    description: "Riz crémeux aux champignons et parmesan.",
+    country: "Italie",
+    image: "/images/risotto-aux-champignons.jpg",
+  },
+  {
+    id: 53,
+    title: "Tiramisu",
+    slug: "tiramisu",
+    category: "Dessert",
+    description:
+      "Dessert italien à base de biscuits imbibés de café et crème mascarpone.",
+    country: "Italie",
+    image: "/images/tiramisu.jpg",
+  },
+  {
+    id: 54,
+    title: "Osso Buco",
+    slug: "osso-buco",
+    category: "PlatPrincipal",
+    description: "Jarret de veau braisé avec légumes et gremolata.",
+    country: "Italie",
+    image: "/images/osso-buco.jpg",
+  },
+  {
+    id: 55,
+    title: "Gnocchi à la Tomate",
+    slug: "gnocchi-tomate",
+    category: "PlatPrincipal",
+    description: "Petites quenelles de pommes de terre avec sauce tomate.",
+    country: "Italie",
+    image: "/images/gnocchi-tomate.jpg",
+  },
+  {
+    id: 56,
+    title: "Raviolis Ricotta-Épinards",
+    slug: "raviolis-ricotta-epinards",
+    category: "PlatPrincipal",
+    description: "Pâtes farcies à la ricotta et aux épinards.",
+    country: "Italie",
+    image: "/images/raviolis-ricotta-epinards.jpg",
+  },
+  {
+    id: 57,
+    title: "Panna Cotta",
+    slug: "panna-cotta",
+    category: "Dessert",
+    description: "Crème cuite au caramel ou coulis de fruits.",
+    country: "Italie",
+    image: "/images/panna-cotta.jpg",
+  },
+  {
+    id: 58,
+    title: "Saltimbocca",
+    slug: "saltimbocca",
+    category: "PlatPrincipal",
+    description: "Escalopes de veau au jambon cru et sauge.",
+    country: "Italie",
+    image: "/images/saltimbocca.jpg",
+  },
+  {
+    id: 59,
+    title: "Focaccia",
+    slug: "focaccia",
+    category: "Entree",
+    description: "Pain plat italien huilé et salé.",
+    country: "Italie",
+    image: "/images/focaccia.jpg",
+  },
+  {
+    id: 60,
+    title: "Minestrone",
+    slug: "minestrone",
+    category: "Entree",
+    description: "Soupe épaisse de légumes de saison.",
+    country: "Italie",
+    image: "/images/minestrone.jpg",
+  },
+  {
+    id: 61,
+    title: "Arancini",
+    slug: "arancini",
+    category: "Entree",
+    description: "Boules de riz farcies, panées et frites.",
+    country: "Italie",
+    image: "/images/arancini.jpg",
+  },
+  {
+    id: 62,
+    title: "Polenta",
+    slug: "polenta",
+    category: "Accompagnement",
+    description: "Porridge de maïs, servie crémeuse ou grillée.",
+    country: "Italie",
+    image: "/images/polenta.jpg",
+  },
+  {
+    id: 63,
+    title: "Caprese",
+    slug: "caprese",
+    category: "Entree",
+    description: "Salade de tomates, mozzarella et basilic.",
+    country: "Italie",
+    image: "/images/caprese.jpg",
+  },
+  {
+    id: 64,
+    title: "Calzone",
+    slug: "calzone",
+    category: "PlatPrincipal",
+    description: "Pizza fermée en chausson.",
+    country: "Italie",
+    image: "/images/calzone.jpg",
+  },
+  {
+    id: 65,
+    title: "Cacio e Pepe",
+    slug: "cacio-e-pepe",
+    category: "PlatPrincipal",
+    description: "Pâtes au fromage pecorino et poivre noir.",
+    country: "Italie",
+    image: "/images/cacio-e-pepe.jpg",
+  },
+  {
+    id: 66,
+    title: "Vitello Tonnato",
+    slug: "vitello-tonnato",
+    category: "Entree",
+    description: "Veau froid en sauce thon-câpres.",
+    country: "Italie",
+    image: "/images/vitello-tonnato.jpg",
+  },
+  {
+    id: 67,
+    title: "Parmigiana d'Aubergines",
+    slug: "parmigiana-aubergines",
+    category: "PlatPrincipal",
+    description: "Aubergines frites, tomate, parmesan et mozzarella.",
+    country: "Italie",
+    image: "/images/parmigiana-aubergines.jpg",
+  },
+  {
+    id: 68,
+    title: "Gelato",
+    slug: "gelato",
+    category: "Dessert",
+    description: "Crème glacée italienne artisanale.",
+    country: "Italie",
+    image: "/images/gelato.jpg",
+  },
+  {
+    id: 69,
+    title: "Paella Valenciana",
+    slug: "paella-valenciana",
+    category: "PlatPrincipal",
+    description: "Riz au poulet, lapin, haricots et safran.",
+    country: "Espagne",
+    image: "/images/paella-valenciana.jpg",
+  },
+  {
+    id: 70,
+    title: "Tortilla Española",
+    slug: "tortilla-espanola",
+    category: "PlatPrincipal",
+    description: "Omelette épaisse aux pommes de terre et oignons.",
+    country: "Espagne",
+    image: "/images/tortilla-espanola.jpg",
+  },
+  {
+    id: 71,
+    title: "Gazpacho",
+    slug: "gazpacho",
+    category: "Entree",
+    description: "Soupe froide de tomates, poivrons et concombre.",
+    country: "Espagne",
+    image: "/images/gazpacho.jpg",
+  },
+  {
+    id: 72,
+    title: "Churros",
+    slug: "churros",
+    category: "Dessert",
+    description:
+      "Beignets allongés saupoudrés de sucre, servis avec du chocolat chaud.",
+    country: "Espagne",
+    image: "/images/churros.jpg",
+  },
+  {
+    id: 73,
+    title: "Salmorejo",
+    slug: "salmorejo",
+    category: "Entree",
+    description: "Soupe froide andalouse plus épaisse que le gazpacho.",
+    country: "Espagne",
+    image: "/images/salmorejo.jpg",
+  },
+  {
+    id: 74,
+    title: "Patatas Bravas",
+    slug: "patatas-bravas",
+    category: "Entree",
+    description: "Dés de pommes de terre frits avec sauce piquante.",
+    country: "Espagne",
+    image: "/images/patatas-bravas.jpg",
+  },
+  {
+    id: 75,
+    title: "Croquetas",
+    slug: "croquetas",
+    category: "Entree",
+    description: "Croquettes béchamel au jambon ou poulet.",
+    country: "Espagne",
+    image: "/images/croquetas.jpg",
+  },
+  {
+    id: 76,
+    title: "Fabada Asturiana",
+    slug: "fabada-asturiana",
+    category: "PlatPrincipal",
+    description: "Ragoût de haricots blancs au chorizo et morcilla.",
+    country: "Espagne",
+    image: "/images/fabada-asturiana.jpg",
+  },
+  {
+    id: 77,
+    title: "Pulpo a la Gallega",
+    slug: "pulpo-a-la-gallega",
+    category: "Entree",
+    description: "Poulpe cuit, paprika, sel et huile d'olive.",
+    country: "Espagne",
+    image: "/images/pulpo-a-la-gallega.jpg",
+  },
+  {
+    id: 78,
+    title: "Gambas al Ajillo",
+    slug: "gambas-al-ajillo",
+    category: "Entree",
+    description: "Crevettes sautées à l'ail et piment.",
+    country: "Espagne",
+    image: "/images/gambas-al-ajillo.jpg",
+  },
+  {
+    id: 79,
+    title: "Migas",
+    slug: "migas",
+    category: "PlatPrincipal",
+    description: "Miettes de pain frites avec chorizo et raisins.",
+    country: "Espagne",
+    image: "/images/migas.jpg",
+  },
+  {
+    id: 80,
+    title: "Pisto Manchego",
+    slug: "pisto-manchego",
+    category: "Accompagnement",
+    description: "Ratatouille espagnole à la courgette, poivron et tomate.",
+    country: "Espagne",
+    image: "/images/pisto-manchego.jpg",
+  },
+  {
+    id: 81,
+    title: "Arroz Negro",
+    slug: "arroz-negro",
+    category: "PlatPrincipal",
+    description: "Riz noir à l'encre de seiche.",
+    country: "Espagne",
+    image: "/images/arroz-negro.jpg",
+  },
+  {
+    id: 82,
+    title: "Empanadas Galiciennes",
+    slug: "empanadas-galiciennes",
+    category: "Entree",
+    description: "Chaussons au thon ou viande en Galice.",
+    country: "Espagne",
+    image: "/images/empanadas-galiciennes.jpg",
+  },
+  {
+    id: 83,
+    title: "Bacalao al Pil-Pil",
+    slug: "bacalao-al-pil-pil",
+    category: "PlatPrincipal",
+    description: "Morue à la sauce émulsionnée d'ail et d'huile.",
+    country: "Espagne",
+    image: "/images/bacalao-al-pil-pil.jpg",
+  },
+  {
+    id: 84,
+    title: "Cocido Madrileño",
+    slug: "cocido-madrileno",
+    category: "PlatPrincipal",
+    description: "Pot-au-feu madrilène avec pois chiches, viande et légumes.",
+    country: "Espagne",
+    image: "/images/cocido-madrileno.jpg",
+  },
+  {
+    id: 85,
+    title: "Huevos Rotos",
+    slug: "huevos-rotos",
+    category: "PlatPrincipal",
+    description: "Œufs frits sur purée de pommes de terre avec jambon.",
+    country: "Espagne",
+    image: "/images/huevos-rotos.jpg",
+  },
+  {
+    id: 86,
+    title: "Tarta de Santiago",
+    slug: "tarta-de-santiago",
+    category: "Dessert",
+    description: "Gâteau aux amandes parfumé au citron.",
+    country: "Espagne",
+    image: "/images/tarta-de-santiago.jpg",
+  },
+  {
+    id: 87,
+    title: "Flan Napolitain",
+    slug: "flan-napolitain",
+    category: "Dessert",
+    description: "Flan au lait concentré et caramélisé.",
+    country: "Espagne",
+    image: "/images/flan-napolitain.jpg",
+  },
+  {
+    id: 88,
+    title: "Churros con Chocolate",
+    slug: "churros-con-chocolate",
+    category: "Dessert",
+    description: "Churros épais trempés dans du chocolat chaud.",
+    country: "Espagne",
+    image: "/images/churros-con-chocolate.jpg",
+  },
+  {
+    id: 89,
+    title: "Sushi",
+    slug: "sushi",
+    category: "PlatPrincipal",
+    description: "Riz vinaigré accompagné de poisson cru et algue nori.",
+    country: "Asie",
+    image: "/images/sushi.jpg",
+  },
+  {
+    id: 90,
+    title: "Ramen",
+    slug: "ramen",
+    category: "PlatPrincipal",
+    description: "Bouillon savoureux avec nouilles, œuf, porc chashu et nori.",
+    country: "Asie",
+    image: "/images/ramen.jpg",
+  },
+  {
+    id: 91,
+    title: "Pad Thaï",
+    slug: "pad-thai",
+    category: "PlatPrincipal",
+    description:
+      "Nouilles de riz sautées avec crevettes, tofu, œuf et cacahuètes.",
+    country: "Asie",
+    image: "/images/pad-thai.jpg",
+  },
+  {
+    id: 92,
+    title: "Curry Thaï Vert",
+    slug: "curry-thai-vert",
+    category: "PlatPrincipal",
+    description: "Curry épicé à base de lait de coco, poulet et légumes.",
+    country: "Asie",
+    image: "/images/curry-thai-vert.jpg",
+  },
+  {
+    id: 93,
+    title: "Pho",
+    slug: "pho",
+    category: "PlatPrincipal",
+    description:
+      "Soupe vietnamienne au bouillon de bœuf, nouilles de riz et herbes fraîches.",
+    country: "Asie",
+    image: "/images/pho.webp",
+  },
+  {
+    id: 94,
+    title: "Tempura",
+    slug: "tempura",
+    category: "Entree",
+    description: "Beignets de crevettes et légumes frits, japonais.",
+    country: "Asie",
+    image: "/images/tempura.jpg",
+  },
+  {
+    id: 95,
+    title: "Gyoza",
+    slug: "gyoza",
+    category: "Entree",
+    description: "Raviolis japonais farcis, poêlés et vapeur.",
+    country: "Asie",
+    image: "/images/gyoza.jpg",
+  },
+  {
+    id: 96,
+    title: "Yakisoba",
+    slug: "yakisoba",
+    category: "PlatPrincipal",
+    description: "Nouilles sautées au porc ou poulet et légumes.",
+    country: "Asie",
+    image: "/images/yakisoba.jpg",
+  },
+  {
+    id: 97,
+    title: "Tom Yum",
+    slug: "tom-yum",
+    category: "Entree",
+    description: "Soupe thaïe aigre-piquante aux crevettes.",
+    country: "Asie",
+    image: "/images/tom-yum.jpg",
+  },
+  {
+    id: 98,
+    title: "Bánh Mì",
+    slug: "banh-mi",
+    category: "PlatPrincipal",
+    description: "Sandwich vietnamien au porc, légumes marinés et coriandre.",
+    country: "Asie",
+    image: "/images/banh-mi.jpg",
+  },
+  {
+    id: 99,
+    title: "Nasi Goreng",
+    slug: "nasi-goreng",
+    category: "PlatPrincipal",
+    description: "Riz frit indonésien aux épices, œuf et poulet.",
+    country: "Asie",
+    image: "/images/nasi-goreng.jpg",
+  },
+  {
+    id: 100,
+    title: "Rendang",
+    slug: "rendang",
+    category: "PlatPrincipal",
+    description: "Bœuf épicé cuit longtemps dans du lait de coco.",
+    country: "Asie",
+    image: "/images/rendang.jpg",
+  },
+  {
+    id: 101,
+    title: "Satay",
+    slug: "satay",
+    category: "Entree",
+    description: "Brochettes de poulet marinées, sauce cacahuète.",
+    country: "Asie",
+    image: "/images/satay.jpg",
+  },
+  {
+    id: 102,
+    title: "Bibimbap",
+    slug: "bibimbap",
+    category: "PlatPrincipal",
+    description: "Bol de riz coréen avec légumes, bœuf et œuf.",
+    country: "Asie",
+    image: "/images/bibimbap.jpg",
+  },
+  {
+    id: 103,
+    title: "Kimchi Jjigae",
+    slug: "kimchi-jjigae",
+    category: "PlatPrincipal",
+    description: "Soupe coréenne épicée au kimchi et tofu.",
+    country: "Asie",
+    image: "/images/kimchi-jjigae.jpg",
+  },
+  {
+    id: 104,
+    title: "Bulgogi",
+    slug: "bulgogi",
+    category: "PlatPrincipal",
+    description: "Bœuf mariné grillé coréen.",
+    country: "Asie",
+    image: "/images/bulgogi.jpg",
+  },
+  {
+    id: 105,
+    title: "Dim Sum",
+    slug: "dim-sum",
+    category: "Entree",
+    description: "Bouchées vapeur chinoises (raviolis, brioches).",
+    country: "Asie",
+    image: "/images/dim-sum.jpg",
+  },
+  {
+    id: 106,
+    title: "Mapo Tofu",
+    slug: "mapo-tofu",
+    category: "PlatPrincipal",
+    description: "Tofu piquant chinois à la viande hachée.",
+    country: "Asie",
+    image: "/images/mapo-tofu.jpg",
+  },
+  {
+    id: 107,
+    title: "Canard Laqué",
+    slug: "canard-laque",
+    category: "PlatPrincipal",
+    description: "Canard rôti au miel, peau croustillante.",
+    country: "Asie",
+    image: "/images/canard-laque.jpg",
+  },
+  {
+    id: 108,
+    title: "Biryani",
+    slug: "biryani",
+    category: "PlatPrincipal",
+    description: "Riz indien épicé au poulet, agneau ou légumes.",
+    country: "Asie",
+    image: "/images/biryani.jpg",
+  },
+  {
+    id: 109,
+    title: "maki",
+    slug: "maki",
+    category: "",
+    description: "Riz vinaigré accompagné de poisson cru et algue nori.",
+    country: "Japon",
+    image: "/images/maki.jpg",
+  },
+  {
+    id: 110,
+    title: "Poule au pot",
+    slug: "poule-au-pot",
+    category: "PlatPrincipal",
+    description:
+      "Poulet entier cuit dans un bouillon avec légumes et aromates.",
+    country: "FranceEntrée",
+    image: "/images/poule-au-pot.jpg",
+  },
+  {
+    id: 111,
+    title: "Burger Maison",
+    slug: "burger-maison",
+    category: "PlatPrincipal",
+    description:
+      "Pain brioché, steak de bœuf grillé, cheddar fondu, salade, tomate et sauce maison.",
+    country: "AmeriqueDuNord",
+    image: "/images/burger-maison.jpg",
+  },
+  {
+    id: 112,
+    title: "Poutine",
+    slug: "poutine",
+    category: "PlatPrincipal",
+    description:
+      "Frites croustillantes et fromage en grain (couic-couic) nappés d'une sauce brune chaude.",
+    country: "AmeriqueDuNord",
+    image: "/images/poutine.jpg",
+  },
+  {
+    id: 113,
+    title: "Cheesecake",
+    slug: "cheesecake",
+    category: "Dessert",
+    description:
+      "Gâteau au fromage à la crème onctueux sur une base de biscuits émiettés.",
+    country: "AmeriqueDuNord",
+    image: "/images/cheesecake.jpg",
+  },
+  {
+    id: 114,
+    title: "Couscous Royal",
+    slug: "couscous-royal",
+    category: "PlatPrincipal",
+    description:
+      "Graines de semoule accompagnées de légumes, bouillon épicé, merguez, agneau et poulet.",
+    country: "Maghreb",
+    image: "/images/couscous-royal.jpg",
+  },
+  {
+    id: 115,
+    title: "Hummus",
+    slug: "hummus",
+    category: "Entree",
+    description:
+      "Purée crémeuse de pois chiches au tahini (crème de sésame), ail et jus de citron.",
+    country: "MoyenOrient",
+    image: "/images/hummus.jpg",
+  },
+  {
+    id: 116,
+    title: "Tajine de Poulet aux Olives",
+    slug: "tajine-poulet-olives",
+    category: "PlatPrincipal",
+    description:
+      "Plat mijoté de poulet tendre aux citrons confits, olives et épices orientales.",
+    country: "Maghreb",
+    image: "/images/tajine-poulet-olives.jpg",
+  },
+  {
+    id: 117,
+    title: "Poulet Yassa",
+    slug: "poulet-yassa",
+    category: "PlatPrincipal",
+    description:
+      "Poulet mariné au citron et à la moutarde, mijoté avec une grande quantité d'oignons.",
+    country: "Afrique",
+    image: "/images/poulet-yassa.jpg",
+  },
+  {
+    id: 118,
+    title: "Riz Jollof",
+    slug: "riz-jollof",
+    category: "PlatPrincipal",
+    description:
+      "Riz festif mijoté dans une sauce riche à base de tomates, poivrons et épices.",
+    country: "Afrique",
+    image: "/images/riz-jollof.jpg",
+  },
+  {
+    id: 119,
+    title: "Tzatziki",
+    slug: "tzatziki",
+    category: "Entree",
+    description:
+      "Mezzé grec frais à base de yaourt, concombre râpé, ail, herbes et huile d'olive.",
+    country: "Grece",
+    image: "/images/tzatziki.jpg",
+  },
+  {
+    id: 120,
+    title: "Frites Belges",
+    slug: "frites-belges",
+    category: "Accompagnement",
+    description:
+      "Bâtonnets de pommes de terre cuits en double cuisson dans la graisse de bœuf.",
+    country: "Belgique",
+    image: "/images/frites-belges.jpg",
+  },
+  {
+    id: 121,
+    title: "Maffé",
+    slug: "maffe",
+    category: "PlatPrincipal",
+    description:
+      "Ragoût de viande (agneau ou bœuf) à la pâte d'arachide, servi avec du riz.",
+    country: "Afrique",
+    image: "/images/maffe.jpg",
+  },
+  {
+    id: 122,
+    title: "Taco Mexicain",
+    slug: "taco-mexicain",
+    category: "PlatPrincipal",
+    description:
+      "Tortilla de maïs garnie de viande, oignons, coriandre et salsa.",
+    country: "AmeriqueLatine",
+    image: "/images/taco-mexicain.jpg",
+  },
+  {
+    id: 123,
+    title: "Guacamole",
+    slug: "guacamole",
+    category: "Entree",
+    description:
+      "Purée d'avocat aux oignons, tomates, coriandre, citron vert et piment.",
+    country: "AmeriqueLatine",
+    image: "/images/guacamole.jpg",
+  },
+  {
+    id: 124,
+    title: "Chili Con Carne",
+    slug: "chili-con-carne",
+    category: "PlatPrincipal",
+    description:
+      "Ragoût épicé de bœuf haché, haricots rouges, tomates et piments.",
+    country: "AmeriqueDuNord",
+    image: "/images/chili-con-carne.jpg",
+  },
+  {
+    id: 125,
+    title: "Falafel",
+    slug: "falafel",
+    category: "PlatPrincipal",
+    description:
+      "Boulettes frites de pois chiches ou fèves, servies en pita avec sauce au tahini.",
+    country: "MoyenOrient",
+    image: "/images/falafel.jpg",
+  },
+  {
+    id: 126,
+    title: "Kimchi",
+    slug: "kimchi",
+    category: "Accompagnement",
+    description: "Chou chinois fermenté épicé, plat d'accompagnement coréen.",
+    country: "Asie",
+    image: "/images/kimchi.jpg",
+  },
+  {
+    id: 127,
+    title: "Goulasch Hongrois",
+    slug: "goulasch-hongrois",
+    category: "PlatPrincipal",
+    description:
+      "Soupe épaisse ou ragoût de bœuf aux légumes, relevé au paprika.",
+    country: "Europe",
+    image: "/images/goulasch-hongrois.jpg",
+  },
+  {
+    id: 128,
+    title: "Fondue Savoyarde",
+    slug: "fondue-savoyarde",
+    category: "PlatPrincipal",
+    description:
+      "Fromages fondus (Beaufort, Comté, Emmental) servis avec du pain pour tremper.",
+    country: "France",
+    image: "/images/fondue-savoyarde.jpg",
+  },
+  {
+    id: 129,
+    title: "Raclette",
+    slug: "raclette",
+    category: "PlatPrincipal",
+    description:
+      "Fromage à raclette fondu, servie avec pommes de terre, charcuterie et cornichons.",
+    country: "France",
+    image: "/images/raclette.jpg",
+  },
+  {
+    id: 130,
+    title: "Hachis Parmentier",
+    slug: "hachis-parmentier",
+    category: "PlatPrincipal",
+    description:
+      "Purée de pommes de terre surmontée de viande hachée gratinée.",
+    country: "France",
+    image: "/images/hachis-parmentier.jpg",
+  },
+  {
+    "id": 131,
+    "title": "Bouillabaisse",
+    "slug": "bouillabaisse",
+    "category": "PlatPrincipal",
+    "description": "Soupe de poissons provençale riche avec fruits de mer, safran et rouille.",
+    "country": "France",
+    "image": "/images/bouillabaisse.jpg"
+  },
+  {
+    "id": 132,
+    "title": "Tarte au Citron Meringuée",
+    "slug": "tarte-au-citron-meringuee",
+    "category": "Dessert",
+    "description": "Tarte classique avec crème au citron et meringue dorée au chalumeau.",
+    "country": "France",
+    "image": "/images/tarte-citron-meringuee.jpg"
+  },
+  {
+    "id": 133,
+    "title": "Escargots à la Bourguignonne",
+    "slug": "escargots-bourguignonne",
+    "category": "Entree",
+    "description": "Escargots cuits avec beurre à l'ail, persil et échalotes.",
+    "country": "France",
+    "image": "/images/escargots-bourguignonne.jpg"
+  },
+  {
+    "id": 134,
+    "title": "Profiteroles",
+    "slug": "profiteroles",
+    "category": "Dessert",
+    "description": "Choux garnis de crème glacée vanille nappés de sauce chocolat chaud.",
+    "country": "France",
+    "image": "/images/profiteroles.jpg"
+  },
+  {
+    "id": 135,
+    "title": "Île Flottante",
+    "slug": "ile-flottante",
+    "category": "Dessert",
+    "description": "Blancs en neige pochés sur crème anglaise avec caramel.",
+    "country": "France",
+    "image": "/images/ile-flottante.jpg"
+  },
+  {
+    "id": 136,
+    "title": "Butter Chicken",
+    "slug": "butter-chicken",
+    "category": "PlatPrincipal",
+    "description": "Poulet mariné au tandoor dans une sauce tomate crémeuse au beurre et épices.",
+    "country": "Asie",
+    "image": "/images/butter-chicken.jpg"
+  },
+  {
+    "id": 137,
+    "title": "Shakshuka",
+    "slug": "shakshuka",
+    "category": "PlatPrincipal",
+    "description": "Œufs pochés dans une sauce tomate épicée aux poivrons et oignons.",
+    "country": "MoyenOrient",
+    "image": "/images/shakshuka.jpg"
+  },
+  {
+    "id": 138,
+    "title": "Moussaka",
+    "slug": "moussaka",
+    "category": "PlatPrincipal",
+    "description": "Gratin d'aubergines, viande hachée et béchamel, spécialité grecque.",
+    "country": "Grece",
+    "image": "/images/moussaka.jpg"
+  },
+  {
+    "id": 139,
+    "title": "Tres Leches",
+    "slug": "tres-leches",
+    "category": "Dessert",
+    "description": "Gâteau imbibé de trois laits, très populaire en Amérique Latine.",
+    "country": "AmeriqueLatine",
+    "image": "/images/tres-leches.jpg"
+  },
+  {
+    "id": 140,
+    "title": "Kouign-Amann",
+    "slug": "kouign-amann",
+    "category": "Dessert",
+    "description": "Pâte feuilletée caramélisée au beurre et sucre, spécialité bretonne.",
+    "country": "France",
+    "image": "/images/kouign-amann.jpg"
+  },
+  {
+    "id": 141,
+    "title": "Paella de Marisco",
+    "slug": "paella-de-marisco",
+    "category": "PlatPrincipal",
+    "description": "Paella aux fruits de mer : crevettes, moules, calamars et safran.",
+    "country": "Espagne",
+    "image": "/images/paella-marisco.jpg"
+  },
+  {
+    "id": 142,
+    "title": "Foie Gras Poêlé",
+    "slug": "foie-gras-poele",
+    "category": "Entree",
+    "description": "Tranches de foie gras poêlées, servies avec réduction de vinaigre balsamique.",
+    "country": "France",
+    "image": "/images/foie-gras-poele.jpg"
+  },
+    {
+    "id": 143,
+    "title": "Rouleaux de Printemps",
+    "slug": "rouleaux-printemps",
+    "category": "Entree",
+    "description": "Galettes de riz garnies de crevettes, vermicelles, légumes croquants et herbes fraîches.",
+    "country": "Asie",
+    "image": "/images/rouleaux-printemps.jpg"
+  },
+  {
+    "id": 144,
+    "title": "Coulis de Tomates au Gingembre Confit",
+    "slug": "coulis-tomates-gingembre-confit",
+    "category": "Sauce",
+    "description": "Sauce tomate parfumée au gingembre confit, idéale pour accompagner viandes et tapas.",
+    "country": "Fusion",
+    "image": "/images/coulis-tomates-gingembre.jpg"
+  },
+  {
+    "id": 145,
+    "title": "Pavlova",
+    "slug": "pavlova",
+    "category": "Dessert",
+    "description": "Dessert meringué croustillant à l'extérieur et moelleux à l'intérieur, garni de crème et fruits frais.",
+    "country": "Oceanie",
+    "image": "/images/pavlova.jpg"
+  },
+  {
+    "id": 146,
+    "title": "Tacos al Pastor",
+    "slug": "tacos-al-pastor",
+    "category": "PlatPrincipal",
+    "description": "Tacos mexicains au porc mariné, ananas, coriandre et oignons.",
+    "country": "AmeriqueLatine",
+    "image": "/images/tacos-al-pastor.jpg"
+  },
+  {
+    "id": 147,
+    "title": "Poulet Tikka Masala",
+    "slug": "poulet-tikka-masala",
+    "category": "PlatPrincipal",
+    "description": "Poulet mariné grillé servi dans une sauce tomate crémeuse aux épices indiennes.",
+    "country": "Asie",
+    "image": "/images/poulet-tikka-masala.jpg"
+  },
+  {
+    "id": 148,
+    "title": "Edamame",
+    "slug": "edamame",
+    "category": "Accompagnement",
+    "description": "Jeunes fèves de soja japonaises servies chaudes avec fleur de sel.",
+    "country": "Japon",
+    "image": "/images/edamame.jpg"
+  },
+  {
+    "id": 149,
+    "title": "Rillettes",
+    "slug": "rillettes",
+    "category": "Entree",
+    "description": "Préparation de viande confite effilochée, généralement de porc ou de canard.",
+    "country": "France",
+    "image": "/images/rillettes.jpg"
+  },
+  {
+    "id": 150,
+    "title": "Bruschetta",
+    "slug": "bruschetta",
+    "category": "Entree",
+    "description": "Pain grillé garni de tomates fraîches, ail, basilic et huile d'olive.",
+    "country": "Italie",
+    "image": "/images/bruschetta.jpg"
+  },
+  {
+    "id": 151,
+    "title": "Soupe Miso",
+    "slug": "soupe-miso",
+    "category": "Entree",
+    "description": "Bouillon japonais au miso avec tofu, algues wakame et ciboule.",
+    "country": "Japon",
+    "image": "/images/soupe-miso.jpg"
+  },
+  {
+    "id": 152,
+    "title": "Taboulé",
+    "slug": "taboule",
+    "category": "Entree",
+    "description": "Salade fraîche orientale à base de persil, boulgour, tomates et citron.",
+    "country": "MoyenOrient",
+    "image": "/images/taboule.jpg"
+  },
+  {
+    "id": 153,
+    "title": "Bao Buns",
+    "slug": "bao-buns",
+    "category": "PlatPrincipal",
+    "description": "Petits pains vapeur asiatiques garnis de viande marinée et légumes croquants.",
+    "country": "Asie",
+    "image": "/images/bao-buns.jpg"
+  },
+  {
+    "id": 154,
+    "title": "Burrata Tomates",
+    "slug": "burrata-tomates",
+    "category": "Entree",
+    "description": "Burrata crémeuse servie avec tomates fraîches, basilic et huile d'olive.",
+    "country": "Italie",
+    "image": "/images/burrata-tomates.jpg"
+  },
+  {
+    "id": 155,
+    "title": "Ceviche de Saumon",
+    "slug": "ceviche-saumon",
+    "category": "Entree",
+    "description": "Saumon mariné au citron vert avec coriandre, oignons rouges et avocat.",
+    "country": "AmeriqueLatine",
+    "image": "/images/ceviche-saumon.jpg"
+  },
+  {
+    "id": 156,
+    "title": "Gyoza au Poulet",
+    "slug": "gyoza-poulet",
+    "category": "Entree",
+    "description": "Raviolis japonais grillés et vapeur farcis au poulet et légumes.",
+    "country": "Japon",
+    "image": "/images/gyoza-poulet.jpg"
+  },
+  {
+    "id": 157,
+    "title": "Poké Bowl",
+    "slug": "poke-bowl",
+    "category": "PlatPrincipal",
+    "description": "Bol hawaïen composé de riz, poisson cru mariné, légumes et fruits frais.",
+    "country": "Oceanie",
+    "image": "/images/poke-bowl.jpg"
+  },
+  {
+    "id": 158,
+    "title": "Chakchouka",
+    "slug": "chakchouka",
+    "category": "PlatPrincipal",
+    "description": "Œufs pochés dans une sauce tomate épicée aux poivrons et oignons.",
+    "country": "Maghreb",
+    "image": "/images/chakchouka.jpg"
+  },
+  {
+    "id": 159,
+    "title": "Carpaccio de Bœuf",
+    "slug": "carpaccio-boeuf",
+    "category": "Entree",
+    "description": "Fines tranches de bœuf cru avec parmesan, roquette et huile d'olive.",
+    "country": "Italie",
+    "image": "/images/carpaccio-boeuf.jpg"
+  },
+  {
+    "id": 160,
+    "title": "Halloumi Grillée",
+    "slug": "halloumi-grillee",
+    "category": "Accompagnement",
+    "description": "Fromage chypriote grillé servi avec citron et herbes fraîches.",
+    "country": "Mediterranee",
+    "image": "/images/halloumi-grillee.jpg"
+  }
+];
 
