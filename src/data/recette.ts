@@ -1950,7 +1950,7 @@ export const recettes: Recette[] = [
     description:
       "Langue de bœuf cuite lentement dans un bouillon aromatique, servie froide en tranches avec sauce gribiche.",
     country: "France",
-    image: "/images/langue-de-boeuf.jpg",
+    image: "/images/langue-de-boeuf.jpeg",
   },
   {
     id: 207,
